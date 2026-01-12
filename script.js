@@ -188,27 +188,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Cursor glow effect
-const cursorGlow = document.createElement('div');
-cursorGlow.className = 'cursor-glow';
-cursorGlow.style.cssText = `
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(244, 114, 182, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    transform: translate(-50%, -50%);
-`;
-document.body.appendChild(cursorGlow);
-
-document.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-});
-
 // Typing effect for hero subtitle
 const heroSubtitle = document.querySelector('.hero-subtitle');
 if (heroSubtitle) {
