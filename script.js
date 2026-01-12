@@ -22,11 +22,11 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 0 30px rgba(139, 92, 246, 0.2)';
-        navbar.style.borderBottomColor = 'rgba(139, 92, 246, 0.3)';
+        navbar.style.boxShadow = '0 0 30px rgba(244, 114, 182, 0.2)';
+        navbar.style.borderBottomColor = 'rgba(244, 114, 182, 0.3)';
     } else {
         navbar.style.boxShadow = 'none';
-        navbar.style.borderBottomColor = 'rgba(139, 92, 246, 0.2)';
+        navbar.style.borderBottomColor = 'rgba(244, 114, 182, 0.2)';
     }
 });
 
@@ -115,7 +115,7 @@ function highlightNavLink() {
                     link.style.color = '';
                     link.classList.remove('active');
                 });
-                navLink.style.color = '#8b5cf6';
+                navLink.style.color = '#f472b6';
                 navLink.classList.add('active');
             }
         }
@@ -196,7 +196,7 @@ cursorGlow.style.cssText = `
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(244, 114, 182, 0.1) 0%, transparent 70%);
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.1s ease;
@@ -214,7 +214,7 @@ const heroSubtitle = document.querySelector('.hero-subtitle');
 if (heroSubtitle) {
     const text = heroSubtitle.textContent;
     heroSubtitle.textContent = '';
-    heroSubtitle.style.borderRight = '2px solid #8b5cf6';
+    heroSubtitle.style.borderRight = '2px solid #f472b6';
 
     let i = 0;
     function typeWriter() {
@@ -249,7 +249,7 @@ document.querySelectorAll('.btn, .contact-item').forEach(element => {
             height: ${size}px;
             left: ${x}px;
             top: ${y}px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(244, 114, 182, 0.3) 0%, transparent 70%);
             border-radius: 50%;
             transform: scale(0);
             animation: rippleEffect 0.6s ease-out;
@@ -282,9 +282,9 @@ document.head.appendChild(style);
 
 // Console welcome message with style
 console.log('%c🚀 Welcome to Aditi\'s Portfolio!',
-    'background: linear-gradient(135deg, #8b5cf6, #06b6d4); color: white; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
+    'background: linear-gradient(135deg, #f472b6, #fb7185); color: white; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
 console.log('%cBuilt with passion using HTML, CSS & JavaScript',
-    'color: #8b5cf6; font-size: 14px;');
+    'color: #f472b6; font-size: 14px;');
 
 // Initialize animations on load
 window.addEventListener('load', () => {

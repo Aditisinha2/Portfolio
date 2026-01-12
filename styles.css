@@ -1,39 +1,40 @@
-/* ===== CSS Variables - Dark Tech Theme ===== */
+/* ===== CSS Variables - Dark Pink Tech Theme ===== */
 :root {
-    /* Dark Theme Colors */
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-tertiary: #1a1a25;
-    --bg-card: #16161f;
+    /* Dark Theme with Pink Tones */
+    --bg-primary: #0d0a0e;
+    --bg-secondary: #140f15;
+    --bg-tertiary: #1c1520;
+    --bg-card: #18121a;
 
-    /* Accent Colors - Cyber Purple & Electric Blue */
-    --accent-primary: #8b5cf6;
-    --accent-secondary: #06b6d4;
-    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
-    --accent-glow: 0 0 30px rgba(139, 92, 246, 0.3);
+    /* Accent Colors - Rose Pink & Coral */
+    --accent-primary: #f472b6;
+    --accent-secondary: #fb7185;
+    --accent-gradient: linear-gradient(135deg, #f472b6 0%, #fb7185 100%);
+    --accent-glow: 0 0 30px rgba(244, 114, 182, 0.3);
 
     /* Neon Effects */
-    --neon-purple: #a855f7;
-    --neon-cyan: #22d3ee;
-    --neon-pink: #ec4899;
+    --neon-pink: #f472b6;
+    --neon-rose: #fb7185;
+    --neon-coral: #fda4af;
 
     /* Text Colors */
     --text-primary: #ffffff;
-    --text-secondary: #a1a1aa;
-    --text-muted: #71717a;
+    --text-secondary: #c4b5c9;
+    --text-muted: #9a8a9f;
 
     /* Border Colors */
-    --border-color: rgba(139, 92, 246, 0.2);
-    --border-glow: rgba(139, 92, 246, 0.5);
+    --border-color: rgba(244, 114, 182, 0.15);
+    --border-glow: rgba(244, 114, 182, 0.5);
 
     /* Typography */
-    --font-family: 'Outfit', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
 
     /* Shadows */
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 25px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 50px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 40px rgba(139, 92, 246, 0.2);
+    --shadow-glow: 0 0 40px rgba(244, 114, 182, 0.2);
 
     /* Transitions */
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -53,11 +54,12 @@ html {
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-primary);
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+    letter-spacing: 0.01em;
 }
 
 /* Scrollbar Styling */
@@ -103,9 +105,9 @@ body::before {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 20%, rgba(244, 114, 182, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(251, 113, 133, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(253, 164, 175, 0.05) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
 }
@@ -216,8 +218,8 @@ body::before {
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(244, 114, 182, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244, 114, 182, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 20s linear infinite;
 }
@@ -240,7 +242,7 @@ body::before {
     right: 10%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(244, 114, 182, 0.15) 0%, transparent 70%);
     animation: float 6s ease-in-out infinite;
 }
 
@@ -330,7 +332,8 @@ body::before {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #06b6d4 100%);
+    font-family: var(--font-display);
+    background: linear-gradient(135deg, #ffffff 0%, #f472b6 50%, #fb7185 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -355,7 +358,7 @@ body::before {
     color: var(--accent-primary);
     font-weight: 500;
     margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    text-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
 }
 
 .hero-description {
@@ -406,7 +409,7 @@ body::before {
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 50px rgba(244, 114, 182, 0.4);
 }
 
 .btn-secondary {
@@ -416,7 +419,7 @@ body::before {
 }
 
 .btn-secondary:hover {
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(244, 114, 182, 0.1);
     border-color: var(--accent-secondary);
     color: var(--accent-secondary);
     transform: translateY(-3px);
@@ -460,7 +463,7 @@ body::before {
 
 .image-wrapper:hover img {
     transform: scale(1.02);
-    box-shadow: 0 0 60px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 60px rgba(244, 114, 182, 0.4);
 }
 
 .image-decoration {
@@ -551,7 +554,7 @@ body::before {
     height: 4px;
     background: var(--accent-gradient);
     border-radius: 2px;
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 20px rgba(244, 114, 182, 0.5);
 }
 
 /* ===== About Section ===== */
@@ -625,7 +628,7 @@ body::before {
 .edu-date,
 .edu-gpa {
     display: inline-block;
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(244, 114, 182, 0.1);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -689,7 +692,7 @@ body::before {
     bottom: 0;
     width: 2px;
     background: var(--accent-gradient);
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
 }
 
 .timeline-item {
@@ -715,11 +718,11 @@ body::before {
 
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        box-shadow: 0 0 20px rgba(244, 114, 182, 0.5);
     }
 
     50% {
-        box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+        box-shadow: 0 0 30px rgba(244, 114, 182, 0.8);
     }
 }
 
@@ -755,13 +758,13 @@ body::before {
 
 .timeline-date {
     display: inline-block;
-    background: rgba(6, 182, 212, 0.1);
+    background: rgba(251, 113, 133, 0.1);
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 0.9rem;
     color: var(--accent-secondary);
     margin-bottom: 15px;
-    border: 1px solid rgba(6, 182, 212, 0.2);
+    border: 1px solid rgba(251, 113, 133, 0.2);
 }
 
 .timeline-details {
@@ -885,7 +888,7 @@ body::before {
 }
 
 .project-tags span {
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(244, 114, 182, 0.1);
     color: var(--accent-primary);
     padding: 6px 14px;
     border-radius: 15px;
@@ -962,7 +965,7 @@ body::before {
     background: var(--accent-gradient);
     border-radius: 10px;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
 }
 
 .interest-tags {
@@ -972,17 +975,17 @@ body::before {
 }
 
 .interest-tags span {
-    background: rgba(6, 182, 212, 0.1);
+    background: rgba(251, 113, 133, 0.1);
     padding: 12px 20px;
     border-radius: 25px;
     font-weight: 500;
     color: var(--accent-secondary);
-    border: 1px solid rgba(6, 182, 212, 0.2);
+    border: 1px solid rgba(251, 113, 133, 0.2);
     transition: var(--transition);
 }
 
 .interest-tags span:hover {
-    background: rgba(6, 182, 212, 0.2);
+    background: rgba(251, 113, 133, 0.2);
     transform: scale(1.05);
 }
 
@@ -1022,7 +1025,7 @@ body::before {
 
 .cert-date {
     display: inline-block;
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(244, 114, 182, 0.1);
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 0.9rem;
@@ -1070,7 +1073,7 @@ body::before {
 
 .activity-card:hover {
     border-color: var(--accent-secondary);
-    box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
+    box-shadow: 0 0 40px rgba(251, 113, 133, 0.2);
 }
 
 .activity-icon {
@@ -1086,13 +1089,13 @@ body::before {
 
 .activity-date {
     display: inline-block;
-    background: rgba(6, 182, 212, 0.1);
+    background: rgba(251, 113, 133, 0.1);
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 0.9rem;
     color: var(--accent-secondary);
     margin-bottom: 15px;
-    border: 1px solid rgba(6, 182, 212, 0.2);
+    border: 1px solid rgba(251, 113, 133, 0.2);
 }
 
 .activity-content ul {
